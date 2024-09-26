@@ -65,9 +65,9 @@ COPY命令将数据写入ADB PG数据库中。
             "writer": {
               "name": "adbpgwriter",
               "parameter": {
-                  "username": "username",
-                  "password": "password",
-                  "host": "host",
+                  "username": "",
+                  "password": "",
+                  "host": "127.0.0.1",
                   "port": "1234",
                   "database": "database",
                   "schema": "schema",
@@ -149,6 +149,7 @@ COPY命令将数据写入ADB PG数据库中。
 
                注意：1、我们强烈不推荐你这样配置，因为当你目的表字段个数、类型等有改动时，你的任务可能运行不正确或者失败
                     2、此处 column 不能配置任何常量值
+                    3、大写字段名,此处配置时,不需要拼接转义符号:\"
 
   * 必选：是 <br />
 
